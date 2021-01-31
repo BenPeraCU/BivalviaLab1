@@ -11,5 +11,5 @@ void main(void)
 
     P1->DIR |= BIT0;
     P1->OUT &= ~BIT1;
-
+    //Ben looked at this
 }
