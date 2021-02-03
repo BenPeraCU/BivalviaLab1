@@ -12,19 +12,14 @@ void main(void)
     uint32_t count1 = 0;
     uint32_t count2 = 0;
 
-    void * i = (void *)0x2001000A;
-    for(i; i < 0x2001000D; i++){
-        printf(i);
-    }
-    /*
-    for(i; *i < 0x200103CD; i++){
-        if(&i == 0xACCA){
+    int *i = (int *)0x2001000A;
+    for(i; i < (int *)0x200103CD; i++){
+        if(*i == 0xACCA){
             count1++;
         }
-        if(&i == 0xABBAAFFA){
+        if(*i == 0xABBAAFFA){
             count2++;
         }
     }
-    */
 
 }
