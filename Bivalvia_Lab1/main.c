@@ -11,13 +11,13 @@ void main(void)
     uint32_t count1 = 0;
     uint32_t count2 = 0;
 
-    int *ptr = (int *)0x2001000A;
-    for(ptr; ptr < (int *)0x200103CD; ptr++){
-        if(*ptr == 0x0000ACCA){
-            count1++;
-        }
+    uint32_t *ptr = (uint32_t *)0x200100A;
+    for(ptr; ptr < (uint32_t *)0x200103CD; ptr++){
         if(*ptr == 0xABBAAFFA){
             count2++;
+        }
+        if(*ptr == 0x0000ACCA){
+            count1++;
         }
     }
 
