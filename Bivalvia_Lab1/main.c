@@ -1,5 +1,5 @@
 #include "msp.h"
-
+#include <stdio.h>
 
 /**
  * main.c
@@ -9,19 +9,22 @@ void main(void)
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
-    P1->DIR |= BIT0; //sets p1.0 as output
-    P1->OUT &= ~BIT0; // sets bit0 to 0
+    uint32_t count1 = 0;
+    uint32_t count2 = 0;
 
-    while(1){
-        int i;
-        P1->OUT |= BIT0; //Sets LED to HIGH (pin1.out = 1b)
-        for(i = 0; i < 100000; i++); //Delays code
-        P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
-        for(i = 0; i < 100000; i++); //Delays code
-        P1->OUT |= BIT0; //Sets LED to HIGH (pin1.out = 1b)
-        for(i = 0; i < 100000; i++); //Delays code
-        P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
-        for(i = 0; i < 100000; i++); //Delays code
+    void * i = (void *)0x2001000A;
+    for(i; i < 0x2001000D; i++){
+        printf(i);
     }
+    /*
+    for(i; *i < 0x200103CD; i++){
+        if(&i == 0xACCA){
+            count1++;
+        }
+        if(&i == 0xABBAAFFA){
+            count2++;
+        }
+    }
+    */
 
 }
