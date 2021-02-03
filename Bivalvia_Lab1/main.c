@@ -1,5 +1,4 @@
 #include "msp.h"
-#include <stdio.h>
 
 /**
  * main.c
