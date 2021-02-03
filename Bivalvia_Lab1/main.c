@@ -14,7 +14,7 @@ void main(void)
 
     int *i = (int *)0x2001000A;
     for(i; i < (int *)0x200103CD; i++){
-        if(*i == 0xACCA){
+        if(*i == 0x0000ACCA){
             count1++;
         }
         if(*i == 0xABBAAFFA){
