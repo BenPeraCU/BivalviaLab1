@@ -15,13 +15,13 @@ void main(void)
     while(1){
         int i;
         P1->OUT |= BIT0; //Sets LED to HIGH (pin1.out = 1b)
-        for(i = 0; i < 100000; i++); //Delays code
+        for(i = 0; i < 200000; i++); //Delays code
         P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
-        for(i = 0; i < 100000; i++); //Delays code
+        for(i = 0; i < 200000; i++); //Delays code
         P1->OUT |= BIT0; //Sets LED to HIGH (pin1.out = 1b)
-        for(i = 0; i < 100000; i++); //Delays code
+        for(i = 0; i < 200000; i++); //Delays code
         P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
-        for(i = 0; i < 100000; i++); //Delays code
+        for(i = 0; i < 200000; i++); //Delays code
     }
 
 }
