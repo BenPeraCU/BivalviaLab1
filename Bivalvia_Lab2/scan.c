@@ -1,6 +1,9 @@
-//scan.c
+/**
+ * scan.c
+ * Scans through memory addresses looking for some patterns.
+**/
 
-void main(int argsc, char *argsv[]) {
+int scan() {
 
     int a = 0, b = 0;
     short int *start = (short int*)0x2001000A, *end = (short int *)0x200103CC;
@@ -12,4 +15,5 @@ void main(int argsc, char *argsv[]) {
     }
 
     return 0;
+
 }

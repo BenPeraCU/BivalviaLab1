@@ -1,11 +1,11 @@
 /**
  * blink.c
+   Blink() blinks an LED.
 **/
 
 #include "msp.h"
 
-
-void main(void)
+void blink()
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
@@ -24,4 +24,5 @@ void main(void)
         for(i = 0; i < 200000; i++); //Delays code
     }
 
+    return 0;
 }
