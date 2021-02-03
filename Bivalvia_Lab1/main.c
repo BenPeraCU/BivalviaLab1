@@ -9,7 +9,11 @@ void main(void)
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
-    P1->DIR |= BIT0;
-    P1->OUT &= ~BIT1;
-    //Ben looked at this
+    P1->DIR |= BIT0; //sets p1.0 as output
+    P1->OUT &= ~BIT1; // sets out to 0
+
+    while(1){
+        P1->OUT |= BIT0;
+    }
+
 }
