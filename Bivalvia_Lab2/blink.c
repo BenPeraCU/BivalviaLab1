@@ -18,10 +18,6 @@ void blink()
         for(i = 0; i < 200000; i++); //Delays code
         P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
         for(i = 0; i < 200000; i++); //Delays code
-        P1->OUT |= BIT0; //Sets LED to HIGH (pin1.out = 1b)
-        for(i = 0; i < 200000; i++); //Delays code
-        P1->OUT &= ~BIT0; //Sets LED to LOW (pin1.out = 0b)
-        for(i = 0; i < 200000; i++); //Delays code
     }
 
     return 0;
