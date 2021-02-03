@@ -1,9 +1,9 @@
+/**
+ * blink.c
+**/
+
 #include "msp.h"
 
-
-/**
- * main.c
-**/
 
 void main(void)
 {
