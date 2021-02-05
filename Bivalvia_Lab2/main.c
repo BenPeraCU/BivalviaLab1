@@ -6,7 +6,6 @@
 
 void blink()
 {
-    
     P1->DIR |= BIT0; //sets p1.0 as output
     P1->OUT &= ~BIT0; // sets bit0 to 0
 
