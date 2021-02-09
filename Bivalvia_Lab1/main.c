@@ -10,7 +10,7 @@ void main(void)
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
-    ptr = (uint16_t *)0x20000000U;
+    ptr = (uint16_t *)0x20001000U;
 
     *(ptr + 0x10) = 0xACCA;
     *(ptr + 0x11) = 0xACCA;
