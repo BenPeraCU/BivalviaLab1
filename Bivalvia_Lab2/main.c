@@ -1,5 +1,10 @@
 /**
- * main.c - Runs blink.c and scan.c
+ * main.c - Runs blink and scan
+ *
+ *
+ * Bivalvia - Adam, Andrew, Ben, and Delan
+ * da boys
+ * Code effectively reads through memory in the range start to end, if those address are valid
 **/
 #include "msp.h"
 #include <stdio.h>
