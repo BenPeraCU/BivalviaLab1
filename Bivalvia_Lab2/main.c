@@ -23,11 +23,11 @@ void blink()
 int scan() {
 
     int a = 0, b = 0;
-    short int *start = (short int*)0x2001000A, *end = (short int *)0x200103CC;
+    uint16_t *start = (uint16_t *)0x2001000A, *end = (uint16_t *)0x200103CC;
 
     while(start < end) {
-        if( (*start) == 0xACCA) { a++; }
-        if( ((*start) == 0xABBA) && (*start + 1) == 0xAFFA) { b++; }
+        if( (*start) == 0xACCAu) { a++; }
+        if( ((*start) == 0xABBAu) && (*start + 1) == 0xAFFAu) { b++; }
         start++;
     }
 
@@ -42,7 +42,7 @@ int main(int argsc, char *argsv[]) {
     
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
     
-    scan(); //scans subsapce of SRAM looking for values
+    scan(); //scans subspace of SRAM looking for values
     
     blink(); //blinks an LED forever
     
