@@ -14,8 +14,8 @@ void main(void)
 
     *(ptr + 0x10) = 0xACCA;
     *(ptr + 0x11) = 0xACCA;
-    *(ptr + 0x12) = 0xABBA;
-    *(ptr + 0x13) = 0xAFFA;
+    *(ptr + 0x12) = 0xAFFA;
+    *(ptr + 0x13) = 0xABBA;
 
     uint32_t count1 = 0;
     uint32_t count2 = 0;
