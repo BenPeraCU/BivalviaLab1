@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
+CG_TOOL_ROOT := /home/doxxy/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -120,34 +120,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Bivalvia_Lab1.out \
+Bivalvia_Lab2.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Bivalvia_Lab1.out" \
+"Bivalvia_Lab2.out" \
 
 BIN_OUTPUTS += \
-Bivalvia_Lab1.hex \
+Bivalvia_Lab2.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"Bivalvia_Lab1.hex" \
+"Bivalvia_Lab2.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Bivalvia_Lab1.out"
+	@$(MAKE) --no-print-directory -Onone "Bivalvia_Lab2.out"
 
 # Tool invocations
-Bivalvia_Lab1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Bivalvia_Lab2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --advice:power=all --define=__MSP432P401R__ --define=ccs --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Bivalvia_Lab1.map" --heap_size=1024 --stack_size=512 -i"/Applications/ti/ccs1020/ccs/ccs_base/arm/include" -i"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" -i"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Bivalvia_Lab1_linkInfo.xml" --rom_model -o "Bivalvia_Lab1.out" $(ORDERED_OBJS)
+	"/home/doxxy/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --advice:power=all --define=__MSP432P401R__ --define=ccs --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Bivalvia_Lab2.map" --heap_size=1024 --stack_size=512 -i"/home/doxxy/ti/ccs1020/ccs/ccs_base/arm/include" -i"/home/doxxy/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" -i"/home/doxxy/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Bivalvia_Lab2_linkInfo.xml" --rom_model -o "Bivalvia_Lab2.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-Bivalvia_Lab1.hex: $(EXE_OUTPUTS)
+Bivalvia_Lab2.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: Arm Hex Utility'
-	"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off -o "Bivalvia_Lab1.hex" $(EXE_OUTPUTS__QUOTED)
+	"/home/doxxy/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off -o "Bivalvia_Lab2.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
